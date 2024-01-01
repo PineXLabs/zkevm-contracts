@@ -68,6 +68,11 @@ interface IPolygonZkEVMBridge {
      */
     error NotValidSignature();
 
+    /**
+     * @dev Thrown when customized usergasToken and Eth are treated as layer2's userGasToken at the same time
+     */
+    error DuplicateGasToken();
+
     function bridgeAsset(
         uint32 destinationNetwork,
         address destinationAddress,

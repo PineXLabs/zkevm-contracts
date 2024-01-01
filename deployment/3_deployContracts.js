@@ -242,6 +242,7 @@ async function main() {
             networkIDMainnet,
             precalculateGLobalExitRootAddress,
             precalculateZkevmAddress,
+            maticTokenAddress, // customized userGasToken
         ],
     );
     const [proxyBridgeAddress, isBridgeProxyDeployed] = await create2Deployment(

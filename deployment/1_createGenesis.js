@@ -55,6 +55,7 @@ async function main() {
         minDelayTimelock,
         salt,
         initialZkEVMDeployerOwner,
+        maticTokenAddress,
     } = deployParameters;
 
     // Load deployer
@@ -108,6 +109,7 @@ async function main() {
             networkIDL2,
             globalExitRootL2Address,
             zkevmAddressL2,
+            maticTokenAddress
         ],
     );
     const [proxyBridgeAddress] = await create2Deployment(zkEVMDeployerContract, salt, deployTransactionProxy, dataCallProxy, deployer);
